@@ -1,0 +1,67 @@
+{
+    "network": {
+        "layers": [],
+        "mutateRate": 0.3,
+        "biasFunction": ""
+    },
+    "carPhysic": {
+        "speed": 0,
+        "maxSpeedDefault": 2,
+        "maxSpeedPlayer": 3,
+        "maxSpeedDummy": 1,
+        "acceleration": 0.2,
+        "friction": 0.05,
+        "angle": 0,
+        "turnRate": 0.3
+    },
+    "playerCar": {
+        "controlType": "AI",
+        "duplicate": 1000,
+        "damaged": false,
+        "shape": [],
+        "maxSpeed": "maxSpeedPlayer",
+        "sensor": {
+            "rayCount": 9,
+            "rayLength": 150,
+            "raySpread": "Math.PI * 2 / 3",
+            "rayColor": "yellow"
+        }
+    },
+    "road": {
+        "width": 48,
+        "lanes": 3,
+        "border": [
+            [
+                {
+                    "x": 10,
+                    "y": -1000000
+                },
+                {
+                    "x": 10,
+                    "y": 1000000
+                }
+            ],
+            [
+                {
+                    "x": 190,
+                    "y": -1000000
+                },
+                {
+                    "x": 190,
+                    "y": 1000000
+                }
+            ]
+        ],
+        "baseColor": "#ffffff"
+    },
+    "traffic": [
+        {
+            "atLane": 1,
+            "y": -100,
+            "width": 30,
+            "height": 50,
+            "controlType": "DUMMY",
+            "maxSpeed": "maxSpeedDummy"
+        }
+    ]
+}
